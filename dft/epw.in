@@ -1,0 +1,27 @@
+NbS2
+&INPUTEPW
+    prefix = 'NbS2'
+    outdir = 'work/'
+    dvscf_dir = 'save'
+
+    wannierize = .true.
+    elph = .true.
+    use_ws = .true.
+    epwwrite = .true.
+
+    nbndsub = 3
+    bands_skipped = 'exclude_bands = 1:12'
+
+    proj(1) = 'Nb: dz2; dx2-y2; dxy'
+
+    dis_froz_max = -5.0
+
+    num_iter = 0
+    wdata(1) = 'dis_num_iter 10000'
+
+    nk1 = 12, nk2 = 12, nk3 = 1
+    nq1 = 12, nq2 = 12, nq3 = 1
+
+    nkf1 = 12, nkf2 = 12, nkf3 = 1
+    nqf1 = 12, nqf2 = 12, nqf3 = 1
+/

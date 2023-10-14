@@ -1,0 +1,39 @@
+&CONTROL
+    prefix = 'NbS2'
+    outdir = 'work'
+    pseudo_dir = '.'
+
+    calculation = 'scf'
+/
+&SYSTEM
+    ibrav = 4
+    ntyp = 2
+    nat = 3
+
+    a = 3.35
+    c = 20.0
+
+    assume_isolated = '2D'
+
+    ecutwfc = 100.0
+
+    occupations = 'smearing'
+    smearing = 'marzari-vanderbilt'
+    degauss = 0.02
+/
+&ELECTRONS
+    conv_thr = 1e-18
+    diago_full_acc = .true.
+/
+
+ATOMIC_SPECIES
+Nb 92.906 Nb.upf
+S  32.06  S.upf
+
+ATOMIC_POSITIONS crystal
+Nb  0.3333333333  0.6666666667  0.5000000000
+S   0.6666666667  0.3333333333  0.4218982562
+S   0.6666666667  0.3333333333  0.5781017438
+
+K_POINTS automatic
+12 12 1 0 0 0
