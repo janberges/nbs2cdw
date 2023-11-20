@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10144912.svg)](https://doi.org/10.5281/zenodo.10144912)
+
 # Charge-density waves in NbS₂
 
 This repository contains the data and source code associated with the paper:
