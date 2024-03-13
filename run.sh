@@ -4,6 +4,10 @@
 #SBATCH --partition standard96
 #SBATCH --time 12:00:00
 
+echo 'Probably this script will not work out of the box on your system.'
+echo 'Please only run selected parts manually, e.g., just the plotting.'
+exit
+
 module load anaconda3 texlive intel impi
 
 export SLURM_CPU_BIND=none
@@ -91,6 +95,10 @@ done
 
 mkdir -p fig
 
-python3 plot.py
+for phase in t1 t1p t2p hexagons
+do
+    python3 plot.py $phase
+done
+
 python3 plot_doping.py
 python3 plot_phases.py
