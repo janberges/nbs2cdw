@@ -45,7 +45,7 @@ if phase in guess:
 else:
     driver.random_displacements()
 
-driver.plot(label=True, interactive=True)
+driver.plot(label=False, interactive=True)
 
 scipy.optimize.minimize(driver.free_energy, driver.u, jac=driver.jacobian,
     method='BFGS', options=dict(gtol=1e-6, norm=np.inf))
