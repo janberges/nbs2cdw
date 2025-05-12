@@ -239,11 +239,13 @@ if comm.rank == 0:
         plot.line(DOS + xref, w, xref, cut=True)
 
     plot.code(r'\fill[lightgray] '
-            '(%g, %g) -- (%g, %g) -- (%g, %g) -- (%g, %g) -- cycle;' % (
-        -plot.width, (+yz - plot.ymin) / (plot.ymax - plot.ymin) * -plot.height,
-        margin + Margin / 2 - plot.width, -plot.height,
-        margin + Margin / 2 - plot.width, 0.0,
-        -plot.width, (-yz - plot.ymin) / (plot.ymax - plot.ymin) * -plot.height,
+        '(%g, %g) -- (%g, %g) -- (%g, %g) -- (%g, %g) -- cycle;' % (
+            -plot.width,
+            (+yz - plot.ymin) / (plot.ymax - plot.ymin) * -plot.height,
+            margin + Margin / 2 - plot.width, -plot.height,
+            margin + Margin / 2 - plot.width, 0.0,
+            -plot.width,
+            (-yz - plot.ymin) / (plot.ymax - plot.ymin) * -plot.height,
         ))
 
     plot.node(plot.xmax, plot.ymin, r'5\,mRy', **label)
@@ -298,11 +300,11 @@ if comm.rank == 0:
         plot.line(DOS + xref, w, xref, cut=True)
 
     plot.code(r'\fill[lightgray] '
-            '(%g, %g) -- (%g, %g) -- (%g, %g) -- (%g, %g) -- cycle;' % (
-        -Margin / 2 - margin, (+yz - ymin) / (ymax - ymin) * -plot.height,
-        0.0, -plot.height,
-        0.0, 0.0,
-        -Margin / 2 - margin, (-yz - ymin) / (ymax - ymin) * -plot.height,
+        '(%g, %g) -- (%g, %g) -- (%g, %g) -- (%g, %g) -- cycle;' % (
+            -Margin / 2 - margin, (+yz - ymin) / (ymax - ymin) * -plot.height,
+            0.0, -plot.height,
+            0.0, 0.0,
+            -Margin / 2 - margin, (-yz - ymin) / (ymax - ymin) * -plot.height,
         ))
 
     plot.line(x=0, color='gray')

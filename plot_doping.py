@@ -82,7 +82,7 @@ for l, doping in enumerate(dopings):
     plot.line(*list(zip(0 * a[0], a[0], a[0] + a[1], a[1], 0 * a[1]))[:2],
         draw='none', fill='yellow!10')
 
-    plot.node(*(a[0] / 2)[:2], '$%s\,e$/f.u.'
+    plot.node(*(a[0] / 2)[:2], r'$%s\,e$/f.u.'
         % ('%+g' % doping if doping else '0'), above=True)
 
     tau = np.linalg.norm(r0[1, :2] - r0[0, :2])
