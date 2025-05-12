@@ -68,7 +68,7 @@ if comm.rank == 0:
             height=0,
             margin=margin,
             xyaxes=False,
-            )
+        )
 
         plot.width = -new_plot().width / 2 + margin
 
@@ -173,11 +173,11 @@ if comm.rank == 0:
             r'$\mathrm M$',
             r'$\mathrm K$',
             r'$\Gamma$',
-            ])),
+        ])),
 
         xlabel='Original Brillouin zone',
         ylabel='Electron energy (eV)',
-        )
+    )
 
     plot.ymin = ymin
     plot.ymax = ymax
@@ -212,7 +212,7 @@ if comm.rank == 0:
         upper='gray',
 
         colorbar=False,
-        )
+    )
 
     plot.ymin = ymin
     plot.ymax = ymax
@@ -270,7 +270,7 @@ if comm.rank == 0:
         upper='gray',
 
         colorbar=False,
-        )
+    )
 
     plot.ymin = -yz
     plot.ymax = +yz
@@ -349,11 +349,11 @@ if comm.rank == 0:
             r'$\Gamma$',
             r"$\mathrm M\smash'$",
             r"$\mathrm K\smash'$",
-            ])),
+        ])),
 
         xlabel='Supercell Brillouin zone',
         ylabel=r'Phonon energy (meV)',
-        )
+    )
 
     for nu in range(ph.size):
         plot.compline(x, w[:, nu], v[:, nu], colors=['magenta', 'black'],
@@ -383,10 +383,10 @@ if comm.rank == 0:
             r'$\Gamma$',
             r'$\mathrm M$',
             r'$\mathrm K$',
-            ])),
+        ])),
 
         xlabel='Original Brillouin zone',
-        )
+    )
 
     for nu in range(ph.size):
         plot.compline(x, w[:, nu], v[:, nu], colors=['magenta', 'black'],
@@ -414,7 +414,7 @@ if comm.rank == 0:
 
         lpos='rt',
         lopt='below left=1mm, draw=gray, fill=white, rounded corners=1pt',
-        )
+    )
 
     for point in 5.0, 1e3 * smearing:
         plot.line(x=point, dash_pattern='on 0.8mm off 0.8mm')
@@ -472,7 +472,7 @@ if comm.rank == 0:
         lpos='rt',
         lopt='below left=1mm',
         lbox=True,
-        )
+    )
 
     omega, DOS, a2F = np.loadtxt('model/smearing+0.0050_%s_a2f.dat' % phase).T
 

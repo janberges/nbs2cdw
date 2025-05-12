@@ -71,7 +71,7 @@ for l, doping in enumerate(dopings):
 
         ylabel=None if l else 'CDW structure',
         xyaxes=False,
-        )
+    )
 
     plot.lines.pop()
 
@@ -146,7 +146,7 @@ for l, doping in enumerate(dopings):
         yminormarks=True,
 
         ylabel=None if l else 'Density of states (1/eV)',
-        )
+    )
 
     w, DOS = np.loadtxt('%s_dos_zoom.dat' % filename).T
 
@@ -173,7 +173,7 @@ for l, doping in enumerate(dopings):
         lopt='below left=1mm, inner sep=2pt',
         llen='2mm',
         lbox=True,
-        )
+    )
 
     omega, DOS, a2F = np.loadtxt('%s_a2f.dat' % filename).T
 

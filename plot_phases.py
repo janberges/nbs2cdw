@@ -62,7 +62,7 @@ for l, title in enumerate(['T1', "T1$'$", 'hexagons', 'T2', "T2$'$", 'stars']):
         height=0,
         margin=margin,
         xyaxes=False,
-        )
+    )
 
     plot.width = (2 * margin - new_plot().width) / 3
 
@@ -148,7 +148,7 @@ style = dict(
     t2p=dict(color='brown', mark='square'),
     hexagons=dict(color='green', mark='square*', mark_options='{rotate=45}'),
     stars=dict(color='red', mark='*'),
-    )
+)
 
 thr_olap = 0.95
 thr_freq = -1e-5
@@ -170,7 +170,7 @@ plot = new_plot(
     lbox=True,
     lwid=2.5,
     lcol=3,
-    )
+)
 
 plot.width -= Margin
 
@@ -208,7 +208,7 @@ plot = new_plot(
     xminormarks=True,
 
     xlabel='Smearing (mRy)',
-    )
+)
 
 plot.axes()
 
